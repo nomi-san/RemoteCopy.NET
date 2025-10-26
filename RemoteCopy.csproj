@@ -1,0 +1,40 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<PackageId>RemoteCopy</PackageId>
+		<Version>0.0.1</Version>
+		
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<RepositoryUrl>https://github.com/nomi-san/RemoteCopy.NET</RepositoryUrl>
+
+		<TargetFramework>net8.0-windows</TargetFramework>
+		<ImplicitUsings>disable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+
+		<IsAotCompatible>true</IsAotCompatible>
+		<DisableRuntimeMarshalling>true</DisableRuntimeMarshalling>
+		<JsonSerializerIsReflectionEnabledByDefault>false</JsonSerializerIsReflectionEnabledByDefault>
+		<BuiltInComInteropSupport>false</BuiltInComInteropSupport>
+		<AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)'=='Release'">
+
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+		
+		<DebuggerSupport>false</DebuggerSupport>
+		<DebugSymbols>false</DebugSymbols>
+		<DebugType>none</DebugType>
+		<NativeDebugSymbols>false</NativeDebugSymbols>
+		<StripSymbols>true</StripSymbols>
+		
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Include="README.md" Pack="true" PackagePath="\"/>
+	</ItemGroup>
+
+</Project>
